@@ -14,4 +14,8 @@ export default defineConfig({
   npmClient: 'pnpm',
   tailwindcss: {},
   plugins: ['@umijs/plugins/dist/tailwindcss'],
+  
+  // GitHub Pages 部署配置
+  publicPath: process.env.NODE_ENV === 'production' ? '/css-compare/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/css-compare/' : '/',
 });
