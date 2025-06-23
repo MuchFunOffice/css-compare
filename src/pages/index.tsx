@@ -58,11 +58,6 @@ export default function HomePage() {
             <p>两种测试使用完全相同的DOM结构和数据量，确保对比的公平性</p>
           </div>
           <div className='feature-card'>
-            <div className='feature-icon'>📊</div>
-            <h3>多维度测量</h3>
-            <p>渲染时间、内存使用、样式计算等多个维度的性能指标</p>
-          </div>
-          <div className='feature-card'>
             <div className='feature-icon'>🔬</div>
             <h3>真实场景</h3>
             <p>1000个复杂组件的大规模测试，模拟真实应用场景</p>
@@ -116,31 +111,6 @@ export default function HomePage() {
               <span className='test-label'>立即测试 →</span>
             </div>
           </Link>
-        </div>
-      </section>
-
-      <section className='stats-section'>
-        <div className='section-header'>
-          <h2>测试规模</h2>
-          <p>大规模性能测试确保结果的可靠性</p>
-        </div>
-        <div className='stats-grid'>
-          <div className='stat-item'>
-            <div className='stat-number'>1000+</div>
-            <div className='stat-label'>测试组件</div>
-          </div>
-          <div className='stat-item'>
-            <div className='stat-number'>5+</div>
-            <div className='stat-label'>性能指标</div>
-          </div>
-          <div className='stat-item'>
-            <div className='stat-number'>100%</div>
-            <div className='stat-label'>结构一致</div>
-          </div>
-          <div className='stat-item'>
-            <div className='stat-number'>实时</div>
-            <div className='stat-label'>性能监控</div>
-          </div>
         </div>
       </section>
     </div>
