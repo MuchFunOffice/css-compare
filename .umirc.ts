@@ -1,0 +1,17 @@
+import { defineConfig } from 'umi';
+
+export default defineConfig({
+  routes: [
+    { path: '/', component: 'index' },
+    { path: '/performance-comparison', component: 'performance-comparison' },
+    { path: '/css-performance', component: 'css-performance' },
+    { path: '/styled-performance', component: 'styled-performance' },
+    { path: 'tailwind', component: 'template/tailwind' },
+    { path: 'css-module', component: 'template/css-module' },
+    { path: 'BEM', component: 'template/BEM' },
+  ],
+
+  npmClient: 'pnpm',
+  tailwindcss: {},
+  plugins: ['@umijs/plugins/dist/tailwindcss'],
+});

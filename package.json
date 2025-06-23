@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "author": "qifan_ma <qifan_ma@huace.cn>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.34",
+    "styled-components": "^6.1.19",
+    "umi": "^4.4.11"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3",
+    "@umijs/plugins": "^4.4.11",
+    "tailwindcss": "^3"
+  }
+}

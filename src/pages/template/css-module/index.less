@@ -1,0 +1,241 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 3rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+        border-radius: 2px;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #7f8c8d;
+      margin-top: 1rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: 2rem;
+
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e1e8ed;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      h2 {
+        color: #2c3e50;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          width: 8px;
+          height: 30px;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          border-radius: 4px;
+          margin-right: 15px;
+        }
+      }
+
+      h3 {
+        color: #34495e;
+        font-size: 1.4rem;
+        margin: 1.5rem 0 1rem 0;
+        border-left: 4px solid #3498db;
+        padding-left: 15px;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        li {
+          margin-bottom: 0.8rem;
+          font-size: 1.05rem;
+          color: #666;
+          position: relative;
+
+          &::before {
+            content: '→';
+            position: absolute;
+            left: -20px;
+            color: #3498db;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .advantages {
+      border-left: 5px solid #27ae60;
+
+      h2 {
+        color: #27ae60;
+
+        &::before {
+          background: linear-gradient(135deg, #27ae60, #2ecc71);
+        }
+      }
+
+      .advantage-item {
+        background: #f8fff9;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        border-left: 4px solid #27ae60;
+
+        strong {
+          color: #27ae60;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .disadvantages {
+      border-left: 5px solid #e74c3c;
+
+      h2 {
+        color: #e74c3c;
+
+        &::before {
+          background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+      }
+
+      .disadvantage-item {
+        background: #fdf2f2;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        border-left: 4px solid #e74c3c;
+
+        strong {
+          color: #e74c3c;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .example {
+      border-left: 5px solid #f39c12;
+
+      h2 {
+        color: #f39c12;
+
+        &::before {
+          background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+      }
+    }
+  }
+
+  .code-block {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    .keyword {
+      color: #81e6d9;
+    }
+
+    .string {
+      color: #f6ad55;
+    }
+
+    .comment {
+      color: #a0aec0;
+      font-style: italic;
+    }
+  }
+
+  .demo-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 1.5rem 0;
+
+    h4 {
+      margin: 0 0 1rem 0;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0;
+      opacity: 0.9;
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ecf0f1;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+
+    .header h1 {
+      font-size: 2.2rem;
+    }
+
+    .content .section {
+      padding: 1.5rem;
+    }
+
+    .code-block {
+      font-size: 0.85rem;
+    }
+  }
+}
