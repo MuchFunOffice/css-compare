@@ -19,7 +19,4 @@ export default defineConfig({
   // GitHub Pages 部署配置
   publicPath: process.env.NODE_ENV === 'production' ? '/css-compare/' : '/',
   base: process.env.NODE_ENV === 'production' ? '/css-compare/' : '/',
-  
-  // 使用 hash 路由解决 GitHub Pages SPA 路由问题
-  history: { type: 'hash' },
 });
