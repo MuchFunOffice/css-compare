@@ -3,8 +3,8 @@ name: 部署到 GitHub Pages
 on:
   # 当推送到 main 分支时触发
   push:
-    branches: [ main ]
-  
+    branches: [main]
+
   # 允许手动触发工作流
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ permissions:
 
 # 只允许一个并发部署，跳过正在运行和最新排队之间的运行
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -26,22 +26,22 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-        
+
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          
+
       - name: 设置 pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
-          
+
       - name: 获取 pnpm store 目录
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-          
+
       - name: 设置 pnpm 缓存
         uses: actions/cache@v3
         with:
@@ -49,19 +49,19 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-            
+
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
-        
+        run: pnpm install
+
       - name: 设置 Pages
         uses: actions/configure-pages@v4
-        
+
       - name: 构建项目
         run: pnpm run build
         env:
           # 设置构建时的 base path，替换为您的仓库名
           BASE_PATH: /css-compare
-          
+
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
@@ -77,4 +77,4 @@ jobs:
     steps:
       - name: 部署到 GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
