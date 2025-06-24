@@ -12,9 +12,6 @@ export default defineConfig({
     { path: 'tailwind+css', component: 'template/tailwind-css' },
   ],
 
-  // 设置为 hash 路由模式，解决 GitHub Pages 的404问题
-  history: { type: 'hash' },
-
   npmClient: 'pnpm',
   tailwindcss: {},
   plugins: ['@umijs/plugins/dist/tailwindcss'],
