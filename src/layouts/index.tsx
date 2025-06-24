@@ -8,7 +8,7 @@ export default function Layout() {
     <div className={styles.navs}>
       {/* 统一的切换按钮 */}
       <div className={styles.toggleButton} onClick={() => setNavsListActive(!navsListActive)}>
-        {navsListActive ? '×' : '☰'}
+        {navsListActive ? '☰' : '×'}
       </div>
 
       <ul className={`${styles.navsList} ${navsListActive ? styles.navsListActive : ''}`}>
@@ -25,13 +25,16 @@ export default function Layout() {
           <Link to='/styled-performance'>CSS-in-JS测试</Link>
         </li>
         <li>
-          <Link to='/BEM'>BEM</Link>
-        </li>
-        <li>
           <Link to='/tailwind'>Tailwind</Link>
         </li>
         <li>
+          <Link to='/BEM'>BEM</Link>
+        </li>
+        <li>
           <Link to='/css-module'>CSS Module</Link>
+        </li>
+        <li>
+          <Link to='/tailwind+css'>Tailwind+CSS</Link>
         </li>
       </ul>
 

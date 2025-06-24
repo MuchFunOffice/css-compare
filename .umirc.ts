@@ -9,6 +9,7 @@ export default defineConfig({
     { path: 'tailwind', component: 'template/tailwind' },
     { path: 'css-module', component: 'template/css-module' },
     { path: 'BEM', component: 'template/BEM' },
+    { path: 'tailwind+css', component: 'template/tailwind-css' },
   ],
 
   npmClient: 'pnpm',
